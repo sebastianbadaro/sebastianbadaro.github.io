@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Experiencia Laboral</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <style>
+    body {	
+      margin: 0;
+      padding: 0;
+      background: rgb(230,230,230);
+      color: rgb(50,50,50);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 112.5%;
+      line-height: 1.6em;
+    }
+
+    /* ================ The Timeline ================ */
+    .timeline {
+      position: relative;
+      width: 660px;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 1em 0;
+      list-style-type: none;
+    }
+    .timeline:before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 100%;
+      margin-left: -3px;
+      background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      z-index: 5;
+    }
+    .timeline li { padding: 1em 0; }
+    .timeline li:after { content: ""; display: block; clear: both; }
+
+    .direction-l { position: relative; width: 300px; float: left; text-align: right; }
+    .direction-r { position: relative; width: 300px; float: right; }
+
+    .flag-wrapper { position: relative; display: inline-block; text-align: center; }
+    .flag {
+      background: rgb(248,248,248);
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    .direction-l .flag { box-shadow: -1px 1px 1px rgba(0,0,0,0.15); }
+    .direction-r .flag { box-shadow: 1px 1px 1px rgba(0,0,0,0.15); }
+
+    .direction-l .flag:before,
+    .direction-r .flag:before {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      content: ' ';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-top: -10px;
+      background: #fff;
+      border-radius: 10px;
+      border: 4px solid rgb(255,80,80);
+      z-index: 10;
+    }
+    .direction-r .flag:before { left: -40px; }
+
+    .direction-l .flag:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-left-color: rgb(248,248,248);
+      border-width: 8px;
+    }
+    .direction-r .flag:after {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: rgb(248,248,248);
+      border-width: 8px;
+    }
+
+    .time-wrapper {
+      display: inline;
+      font-size: 0.666em;
+      color: rgb(250,80,80);
+      vertical-align: middle;
+    }
+    .time { background: rgb(248,248,248); padding: 4px 6px; }
+
+    .desc {
+      margin: 1em 0.75em 0 0;
+      font-size: 0.85em;
+      font-style: italic;
+      line-height: 1.5em;
+    }
+    .direction-r .desc { margin: 1em 0 0 0.75em; }
+
+    /* Responsive */
+    @media screen and (max-width: 660px) {
+      .timeline { width: 100%; padding: 4em 0 1em 0; }
+      .direction-l, .direction-r { float: none; width: 100%; text-align: center; }
+      .flag-wrapper { text-align: center; }
+      .flag { background: rgb(255,255,255); z-index: 15; }
+      .direction-l .flag:before,
+      .direction-r .flag:before {
+        top: -30px; left: 50%;
+        margin-left: -9px;
+      }
+      .direction-l .flag:after,
+      .direction-r .flag:after {
+        left: 50%; top: -8px;
+        margin-left: -8px;
+        border-bottom-color: rgb(255,255,255);
+      }
+      .time-wrapper { display:block; margin-top: 4px; }
+      .desc { margin: 1em; padding: 1em; background: rgb(245,245,245); }
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="timeline">
+    <!-- Item 1 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Inicio Universidad</span>
+          <span class="time-wrapper"><span class="time">2010</span></span>
+        </div>
+        <div class="desc">
+          Ingenieria en Software en la Universidad de Palermo
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Ayudante de Catedra</span>
+          <span class="time-wrapper"><span class="time">2012</span></span>
+        </div>
+        <div class="desc">
+          	Ayudante de catedra de Introducción a la programación.
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 3 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Publicación</span>
+          <span class="time-wrapper"><span class="time">2013</span></span>
+        </div>
+        <div class="desc">
+SISTEMAS EXPERTOS: Fundamentos, Metodologías y Aplicaciones<br>
+Ciencia y Tecnología Nº 13. <br>Facultad de Ingeniería de la Universidad de Palermo. <br>Citado mas de 250 veces.
+        </div>
+      </div>
+    </li>
+
+
+    <!-- Item 4 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Publicación</span>
+          <span class="time-wrapper"><span class="time">2014</span></span>
+        </div>
+        <div class="desc">
+          Playing with maths: GeoGebra application for meaningful education
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 5 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Analista de QA</span>
+          <span class="time-wrapper"><span class="time"> Oct 2014</span></span>
+        </div>
+        <div class="desc">
+Grupo Logìstico Andreani<br>
+          Desarrollo de casos de prueba a partir de casos de uso.<br><br>
+-Testing manual de aplicaciones web y de escritorio utilizando casos de prueba.<br><br>
+-Automatización de test para web services con SoapUI.<br><br>
+-Investigación de herramientas de automatización de Testing (TestComplete, Selenium, SoapUI).<br><br>
+-Uso de Jira y Trello como herramienta de seguimiento de incidencias.<br><br>
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 6 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Desarrollador C#.Net</span>
+          <span class="time-wrapper"><span class="time"> Jun 2015</span></span>
+        </div>
+        <div class="desc">
+Grupo Logìstico Andreani<br>
+        -Desarrollo en C# .NET con framework 4.0, Winforms y SQL Server 2010/2012 para la aplicación de escritorio core de la empresa.<br><br>
+-Análisis e implementación a partir de documentación funcional. <br><br>
+Interacción con Usuarios para obtener y validar requerimientos.<br><br>
+-Uso de metodologías ágiles.<br><br>
+-Manejo de versionado con TortoiseSVN.<br><br>
+-Integración continua utilizando Jenkins.<br><br>
+-Resolución de bugs, mantenimiento y optimización de codigo.
+        </div>
+      </div>
+    </li>
+   <!-- Item 7 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Fin Universidad</span>
+          <span class="time-wrapper"><span class="time">2016</span></span>
+        </div>
+        <div class="desc">
+          Ingenieria en Software en la Universidad de Palermo
+        </div>
+      </div>
+    </li>
+
+<!-- Item 8 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certificación</span>
+          <span class="time-wrapper"><span class="time">2016</span></span>
+        </div>
+        <div class="desc">
+		Scrum Master<br>
+          Scrum Alliance<br>
+        </div>
+      </div>
+    </li>
+
+<!-- Item 9 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Analista de Sis.</span>
+          <span class="time-wrapper"><span class="time">Abr 2017</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+	  Analista de Sistemas Impositivos
+	
+	Soporte y mantenimiento de aplicación de Impuestos para EE.UU y Canada. Diseño técnico y mejoras funcionales a través de la constante interacción con los analistas de impuestos ubicados en Buenos Aires y Houston para cumplir con las disposiciones requeridas por IRS (Internal Revenue Service) y CRA (Canada Revenue Agency).
+        </div>
+      </div>
+    </li>
+
+
+<!-- Item 10 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Desarrollador FullStack</span>
+          <span class="time-wrapper"><span class="time">2018</span></span>
+        </div>
+        <div class="desc">
+          Freelance (Paralelo)<br><br>
+	  -Sistema gestor de auditorias para proveedores de servicios de salud<br>
+	  -Sistema gestor de stock de local de ropa<br><br>
+	  -Desarrollo de front end, backend, base de datos y deploy en produccion.<br>
+	  -MySql, Laravel, PHP
+		
+        </div>
+      </div>
+    </li>
+
+
+<!-- Item 11 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Analista BI</span>
+          <span class="time-wrapper"><span class="time">Ene 2019</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+	  Analista de BI<br>
+	
+	Referente técnico de bases de datos SQL, VB6, C#, Powershell. Desarrollo de dashboards utilizando PowerBI y Tableau.
+        </div>
+      </div>
+    </li>
+
+<!-- Item 12 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Especialización</span>
+          <span class="time-wrapper"><span class="time">2020 - 2021</span></span>
+        </div>
+        <div class="desc">
+          Explotacion de datos y descubrimiento del conocimiento.<br>
+	  Universidad de Buenos Aires	
+        </div>
+      </div>
+    </li>
+
+<!-- Item 13 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Scrum Master</span>
+          <span class="time-wrapper"><span class="time">Oct 2021</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+	  (Mientras sigo como Analista BI)<br><br>
+	-Facilitar las ceremonias de Scrum como Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective<br><br>
+-Ayudar al equipo a establecer y mantener un alto nivel de productividad.<br><br>
+-Proteger al equipo de interrupciones y distracciones externas.<br><br>
+-Ayudar a los miembros del equipo a comprender y usar Scrum de manera efectiva.<br><br>
+-Ayudar al Product Owner con la gestión de pedidos.<br><br>
+-Trabajar con el equipo para identificar y eliminar los obstáculos que impiden el progreso.<br><br>
+-Formar al equipo en autoorganización.<br><br>
+-Facilitar la comunicación y la colaboración entre los miembros del equipo y las partes interesadas.<br><br>
+-Promover una cultura de mejora continua.<br><br>
+-Asegurarse de que el equipo siga el proceso Scrum e identificar áreas de mejora<br><br>
+	
+        </div>
+      </div>
+    </li>
+
+
+<!-- Item 14 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Ingeniero de Datos</span>
+          <span class="time-wrapper"><span class="time">Ene 2023</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br><br>
+	 -Diseño, mantenimiento y optimización de procesos ETL/ELT para la transferencia eficiente de datos entre fuentes internas y externas utilizando Azure y Databricks.<br><br>
+-Soporte a una plataforma de datos avanzada que maneja grandes volúmenes, incluyendo procesos de datos en streaming.<br><br>
+-Desarrollo de dashboards y reportes de BI para la visualización de datos complejos según necesidades del cliente.<br><br>
+-Colaboración con equipos multifuncionales y usuarios globales para resolver problemas de flujo de datos y cumplir con solicitudes específicas.<br><br>
+-Optimización de consultas SQL para mejorar el rendimiento y la eficiencia en la recuperación de datos.<br><br>
+-Interacción directa con usuarios para solucionar problemas de comunicación, aplicaciones e integraciones de herramientas de datos.<br>
+	
+        </div>
+      </div>
+    </li>
+
+
+<!-- Item 15 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certificación</span>
+          <span class="time-wrapper"><span class="time">2023</span></span>
+        </div>
+        <div class="desc">
+          Microsof Certified: Azure Data Fundamentals	
+        </div>
+      </div>
+    </li>
+
+<!-- Item 16 -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certificación</span>
+          <span class="time-wrapper"><span class="time">2024</span></span>
+        </div>
+        <div class="desc">
+          Certified SAFe 6 Practitioner
+SAFe by Scaled Agile, inc.
+        </div>
+      </div>
+    </li>
+
+<!-- Item 17 -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Analista de Datos</span>
+          <span class="time-wrapper"><span class="time">Oct 2025</span></span>
+        </div>
+        <div class="desc">
+          Zentenio ?<br><br>
+	 
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+</body>
+</html>
