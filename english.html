@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Work Experience</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <style>
+    body {	
+      margin: 0;
+      padding: 0;
+      background: rgb(230,230,230);
+      color: rgb(50,50,50);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 112.5%;
+      line-height: 1.6em;
+    }
+
+    .timeline {
+      position: relative;
+      width: 660px;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 1em 0;
+      list-style-type: none;
+    }
+    .timeline:before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 100%;
+      margin-left: -3px;
+      background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      z-index: 5;
+    }
+    .timeline li { padding: 1em 0; }
+    .timeline li:after { content: ""; display: block; clear: both; }
+
+    .direction-l { position: relative; width: 300px; float: left; text-align: right; }
+    .direction-r { position: relative; width: 300px; float: right; }
+
+    .flag-wrapper { position: relative; display: inline-block; text-align: center; }
+    .flag {
+      background: rgb(248,248,248);
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    .direction-l .flag { box-shadow: -1px 1px 1px rgba(0,0,0,0.15); }
+    .direction-r .flag { box-shadow: 1px 1px 1px rgba(0,0,0,0.15); }
+
+    .direction-l .flag:before,
+    .direction-r .flag:before {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      content: ' ';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-top: -10px;
+      background: #fff;
+      border-radius: 10px;
+      border: 4px solid rgb(255,80,80);
+      z-index: 10;
+    }
+    .direction-r .flag:before { left: -40px; }
+
+    .direction-l .flag:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-left-color: rgb(248,248,248);
+      border-width: 8px;
+    }
+    .direction-r .flag:after {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: rgb(248,248,248);
+      border-width: 8px;
+    }
+
+    .time-wrapper {
+      display: inline;
+      font-size: 0.666em;
+      color: rgb(250,80,80);
+      vertical-align: middle;
+    }
+    .time { background: rgb(248,248,248); padding: 4px 6px; }
+
+    .desc {
+      margin: 1em 0.75em 0 0;
+      font-size: 0.85em;
+      font-style: italic;
+      line-height: 1.5em;
+    }
+    .direction-r .desc { margin: 1em 0 0 0.75em; }
+
+    @media screen and (max-width: 660px) {
+      .timeline { width: 100%; padding: 4em 0 1em 0; }
+      .direction-l, .direction-r { float: none; width: 100%; text-align: center; }
+      .flag-wrapper { text-align: center; }
+      .flag { background: rgb(255,255,255); z-index: 15; }
+      .direction-l .flag:before,
+      .direction-r .flag:before {
+        top: -30px; left: 50%;
+        margin-left: -9px;
+      }
+      .direction-l .flag:after,
+      .direction-r .flag:after {
+        left: 50%; top: -8px;
+        margin-left: -8px;
+        border-bottom-color: rgb(255,255,255);
+      }
+      .time-wrapper { display:block; margin-top: 4px; }
+      .desc { margin: 1em; padding: 1em; background: rgb(245,245,245); }
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="timeline">
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">University Start</span>
+          <span class="time-wrapper"><span class="time">2010</span></span>
+        </div>
+        <div class="desc">
+          Software Engineering at Universidad de Palermo
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Teaching Assistant</span>
+          <span class="time-wrapper"><span class="time">2012</span></span>
+        </div>
+        <div class="desc">
+          Teaching Assistant for Introduction to Programming
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Publication</span>
+          <span class="time-wrapper"><span class="time">2013</span></span>
+        </div>
+        <div class="desc">
+          EXPERT SYSTEMS: Fundamentals, Methodologies and Applications<br>
+          Science and Technology No. 13.<br>
+          Faculty of Engineering, Universidad de Palermo.<br>
+          Cited over 250 times.
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Publication</span>
+          <span class="time-wrapper"><span class="time">2014</span></span>
+        </div>
+        <div class="desc">
+          Playing with maths: GeoGebra application for meaningful education
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">QA Analyst</span>
+          <span class="time-wrapper"><span class="time">Oct 2014</span></span>
+        </div>
+        <div class="desc">
+          Grupo Logístico Andreani<br>
+          - Development of test cases based on use cases.<br><br>
+          - Manual testing of web and desktop applications using test cases.<br><br>
+          - Test automation for web services with SoapUI.<br><br>
+          - Research on automation tools (TestComplete, Selenium, SoapUI).<br><br>
+          - Use of Jira and Trello as issue tracking tools.<br><br>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">C#.Net Developer</span>
+          <span class="time-wrapper"><span class="time">Jun 2015</span></span>
+        </div>
+        <div class="desc">
+          Grupo Logístico Andreani<br>
+          - Development in C# .NET with framework 4.0, Winforms and SQL Server 2010/2012 for the company’s core desktop application.<br><br>
+          - Analysis and implementation based on functional documentation.<br><br>
+          - Interaction with users to gather and validate requirements.<br><br>
+          - Use of Agile methodologies.<br><br>
+          - Version control with TortoiseSVN.<br><br>
+          - Continuous integration with Jenkins.<br><br>
+          - Bug fixing, maintenance, and code optimization.
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">University Graduation</span>
+          <span class="time-wrapper"><span class="time">2016</span></span>
+        </div>
+        <div class="desc">
+          Software Engineering at Universidad de Palermo
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certification</span>
+          <span class="time-wrapper"><span class="time">2016</span></span>
+        </div>
+        <div class="desc">
+          Scrum Master<br>
+          Scrum Alliance
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Systems Analyst</span>
+          <span class="time-wrapper"><span class="time">Apr 2017</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+          Tax Systems Analyst<br><br>
+          Support and maintenance of Tax application for U.S. and Canada. Technical design and functional improvements through constant interaction with tax analysts located in Buenos Aires and Houston to comply with IRS (Internal Revenue Service) and CRA (Canada Revenue Agency) requirements.
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">FullStack Developer</span>
+          <span class="time-wrapper"><span class="time">2018</span></span>
+        </div>
+        <div class="desc">
+          Freelance (Side projects)<br><br>
+          - Audit management system for healthcare service providers<br>
+          - Inventory management system for a clothing store<br><br>
+          - Frontend, backend, database development and production deployment.<br>
+          - MySQL, Laravel, PHP
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">BI Analyst</span>
+          <span class="time-wrapper"><span class="time">Jan 2019</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+          BI Analyst<br><br>
+          Technical lead for SQL databases, VB6, C#, Powershell. Dashboard development using PowerBI and Tableau.
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Specialization</span>
+          <span class="time-wrapper"><span class="time">2020 - 2021</span></span>
+        </div>
+        <div class="desc">
+          Data Exploitation and Knowledge Discovery<br>
+          Universidad de Buenos Aires
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Scrum Master</span>
+          <span class="time-wrapper"><span class="time">Oct 2021</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br>
+          (While continuing as BI Analyst)<br><br>
+          - Scrum from scratch<br>
+          - Replacement trained<br>
+          - High productivity<br>
+          - Backlog management<br>
+          - Obstacle removal<br>
+          - Scrum ceremonies<br>
+          - Team training
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag">Data Engineer</span>
+          <span class="time-wrapper"><span class="time">Jan 2023</span></span>
+        </div>
+        <div class="desc">
+          ExxonMobil<br><br>
+          - ETL/ELT Azure<br>
+          - Oil data<br>
+          - Data lakes/warehouses<br>
+          - Pipeline monitoring<br>
+          - SQL optimization<br>
+          - CI/CD Git<br>
+          - Team support<br>
+          - Spotfire dashboards<br>
+          - Documentation/training
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certification</span>
+          <span class="time-wrapper"><span class="time">2023</span></span>
+        </div>
+        <div class="desc">
+          Microsoft Certified: Azure Data Fundamentals
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">Certification</span>
+          <span class="time-wrapper"><span class="time">2024</span></span>
+        </div>
+        <div class="desc">
+          Certified SAFe 6 Practitioner<br>
+          SAFe by Scaled Agile, Inc.
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+</body>
+</html>
